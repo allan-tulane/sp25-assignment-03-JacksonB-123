@@ -43,7 +43,7 @@ def fast_align_MED(S, T, MED={}):
     # TODO - keep track of alignment
     key = (S, T)
     if key in MED:
-        return MED[key]  # Return the entire tuple: (distance, align_S, align_T)
+        return MED[key][1], MED[key][2]# Return the entire tuple: (distance, align_S, align_T)
     if S == "":
         MED[key] = (len(T), '-' * len(T), T)
     elif T == "":
@@ -65,4 +65,4 @@ def fast_align_MED(S, T, MED={}):
         choices = [ins_result, del_result, sub_result]
         choices.sort(key=lambda x: (x[0], x[1], x[2]))
         MED[key] = choices[0]
-    return MED[key]
+    return MED[key][1], MED[key][2]
