@@ -37,13 +37,13 @@ def fast_MED(S, T, MED={}):
         substitute = fast_MED(S[1:], T[1:], MED)
         MED[key] = 1 + min(insert, delete, substitute)
     return MED[key]
-    
+
 
 def fast_align_MED(S, T, MED={}): 
     # TODO - keep track of alignment
     key = (S, T)
     if key in MED:
-        return MED[key]  # Return all components: distance, align_S, align_T
+        return MED[key][1], MED[key][2]  # Return only the alignment strings
     if S == "":
         MED[key] = (len(T), '-' * len(T), T)
     elif T == "":
