@@ -43,12 +43,12 @@ def fast_align_MED(S, T, MED={}):
     # TODO - keep track of alignment
     key = (S, T)
     if key in MED:
-        return MED[key]  # Return all components: distance, align_S, align_T
+        return MED[key]  # Return the entire tuple: (distance, align_S, align_T)
     if S == "":
         MED[key] = (len(T), '-' * len(T), T)
     elif T == "":
         MED[key] = (len(S), S, '-' * len(S))
-    elif S[0] == T[0]:
+    elif S[0] == T[0]: 
         dist, align_S, align_T = fast_align_MED(S[1:], T[1:], MED)
         MED[key] = (dist, S[0] + align_S, T[0] + align_T)
     else:
