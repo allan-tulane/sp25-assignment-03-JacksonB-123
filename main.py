@@ -37,7 +37,7 @@ def fast_MED(S, T, MED={}):
         MED[key] = 1 + min(insert, delete)
     return MED[key]
     
-def fast_align_MED(S, T, MED={}): 
+def fast_align_MED(S, T, MED={}): #I had the replit ai help me but it was not helpful. I wish I could have gone to TA office hours last week.
     # TODO - keep track of alignment
     key = (S, T)
     if key in MED:

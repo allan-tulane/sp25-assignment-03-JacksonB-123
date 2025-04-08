@@ -1,7 +1,7 @@
 # CMPS 2200 Assignment 3
 ## Answers
 
-**Name:**_____Jackson Burch____________________
+**Name:**_____Jackson Burch__________( I had the replit AI debugger help me but it failed it couldnt help)__________
 
 
 Place all written answers from `assignment-03.md` here for easier grading.
